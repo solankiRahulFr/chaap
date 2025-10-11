@@ -1,0 +1,9 @@
+fastapi
+uvicorn[standard]
+sqlmodel
+SQLAlchemy
+databases
+aioredis
+pyjwt
+passlib[bcrypt]
+python-dotenv
