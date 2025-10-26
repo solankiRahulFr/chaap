@@ -1,12 +1,14 @@
 # Chaap
-💬 FastAPI Realtime Chat App
+
+## FastAPI Realtime Chat App
 
 A simple WhatsApp-like chat application built with FastAPI, WebSockets, JWT authentication, and a lightweight HTML + JavaScript frontend.
 
 Users can register, log in, view a list of all users, and send or receive real-time messages that are stored in a database.
 The UI provides a clean interface with a user list on the left and a chat panel on the right.
 
-🚀 Features
+
+### Features
 
 🔐 JWT-based authentication (login and token validation)
 
@@ -22,7 +24,8 @@ The UI provides a clean interface with a user list on the left and a chat panel 
 
 👋 Create User & Logout flow supported
 
-⚙️ Setup
+
+### Setup
 1. Clone the repo
 git clone https://github.com/solankiRahulFr/chaap.git
 cd chaap
@@ -41,14 +44,16 @@ fastapi dev main.py
 
 By default, the server runs on http://127.0.0.1:8000
 
-💻 Frontend
+
+
+### Frontend
 
 The simple UI is served by FastAPI itself.
 You can access it by visiting:
 
 👉 http://127.0.0.1:8000/
 
-Features of the UI:
+**Features of the UI:**
 
 Displays all users on the left panel.
 
@@ -60,14 +65,18 @@ Disables the input field until a user is selected.
 
 Sends and receives real-time messages via WebSocket.
 
-🧠 API Overview
+
+
+### API Overview
 Endpoint	Method	Description
 /register	POST	Create a new user
 /login	POST	Authenticate and receive JWT token
 /users	GET	Fetch all users (requires JWT)
 /messages/{user_id}	GET	Fetch chat history between users
 /ws?token=<JWT>	WS	WebSocket endpoint for real-time messages
-🗃️ Database Models
+
+
+### Database Models
 User
 Field	Type
 id	Integer (Primary Key)
@@ -81,7 +90,9 @@ recipient_id	ForeignKey(User.id)
 content	String
 created_at	DateTime
 delivered	Boolean
-🔐 Authentication
+
+
+### Authentication
 
 On login, a JWT token is returned.
 
@@ -89,6 +100,8 @@ The frontend stores it in sessionStorage.
 
 All API and WebSocket calls require this token in headers or as a query parameter.
 
-📸 UI Preview
+
+
+### UI Preview
 
 ![alt text](image.png)
